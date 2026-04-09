@@ -1,9 +1,12 @@
 import { Router } from 'express';
-import { getOrders, checkout } from '../controllers/OrderController';
+import { OrderController } from '../controllers/OrderController';
+import { authenticate } from '../middleware/authMiddleware';
 
 const router = Router();
 
-router.get('/', getOrders);
-router.post('/checkout', checkout);
+router.use(authenticate);
+
+router.post('/checkout', OrderController.checkout);
+router.get('/history', OrderController.getOrderHistory);
 
 export default router;

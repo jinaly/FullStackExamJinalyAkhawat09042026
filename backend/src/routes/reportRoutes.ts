@@ -1,9 +1,9 @@
 import { Router } from 'express';
-import { getSqlReports, getMongoReports } from '../controllers/ReportController';
+import { ReportController } from '../controllers/ReportController';
+import { authenticate } from '../middleware/authMiddleware';
 
 const router = Router();
 
-router.get('/sql', getSqlReports);
-router.get('/mongo', getMongoReports);
+router.get('/', authenticate, ReportController.getReports);
 
 export default router;
