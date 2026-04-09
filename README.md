@@ -112,7 +112,7 @@ This will start the frontend on [http://localhost:3000](http://localhost:3000).
 - `/routes`: Express routers mapping URLs to their corresponding Controller functions.
 
 ### `/frontend/src`
-- `/app`: The new App Router directory. Includes standard UI pages layout files (`layout.tsx`, `page.tsx`). Includes initial styling (Vanilla CSS approach without Tailwind, as dictated by design constraints).
+- `/app`: The new App Router directory. Includes standard UI pages layout files (`layout.tsx`, `page.tsx`). Includes initial styling.
 
 ## API Checklist (To Be Built Further)
 - `POST /api/auth/register`
