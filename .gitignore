@@ -1,7 +1,14 @@
 node_modules/
+**/node_modules/
+
 dist/
-.env
-.DS_Store
+**/dist/
 .next/
 out/
+build/
+
+.env
+**/.env
+
+.DS_Store
 coverage/

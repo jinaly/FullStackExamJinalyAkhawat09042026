@@ -46,6 +46,7 @@ PG_PORT=5432
 
 # MongoDB
 MONGO_URI=mongodb://localhost:27017/ecommerce
+MONGO_URI=mongodb+srv://jinalyakhawat_db_user:jinaly123@cluster0.mrgt5qw.mongodb.net/ecommerce?retryWrites=true&w=majority
 ```
 
 ### SQL Schema Initialization

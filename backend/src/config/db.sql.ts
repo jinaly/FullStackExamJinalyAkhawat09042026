@@ -3,17 +3,16 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 export const pool = new Pool({
-  user: process.env.PG_USER || 'postgres',
-  host: process.env.PG_HOST || 'localhost',
-  database: process.env.PG_DATABASE || 'ecommerce',
-  password: process.env.PG_PASSWORD || 'password',
-  port: parseInt(process.env.PG_PORT || '5432', 10),
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false,
+  },
 });
 
 export const connectSQL = async () => {
     try {
-        await pool.query('SELECT NOW()');
-        console.log('PostgreSQL connected successfully');
+        const res = await pool.query('SELECT NOW()');
+        console.log('PostgreSQL (Neon) connected successfully at:', res.rows[0].now);
     } catch (error) {
         console.error('PostgreSQL connection error:', error);
     }
