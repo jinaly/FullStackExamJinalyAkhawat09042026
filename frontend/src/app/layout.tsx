@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import './globals.css';
 import Header from '../components/Header';
 import { Toaster } from 'sonner';
@@ -16,7 +17,9 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Toaster richColors position="top-right" />
-        <Header />
+        <Suspense>
+          <Header />
+        </Suspense>
         <main className="main-content">
           {children}
         </main>
