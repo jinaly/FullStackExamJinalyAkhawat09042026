@@ -120,3 +120,8 @@ This will start the frontend on [http://localhost:3000](http://localhost:3000).
 - `POST /api/orders/checkout` (PostgreSQL insertion)
 - `GET /api/reports/sql` (Advanced PostgreSQL Query)
 - `GET /api/reports/mongo` (MongoDB Aggregations)
+
+## Live URL
+- https://ecommerce-frontend-coral-one.vercel.app/
+Email: jhon@gmail.com
+Password : jhon123
